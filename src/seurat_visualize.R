@@ -13,7 +13,7 @@ parser = OptionParser()
 parser <- add_option(parser, c("--input_file"), help = "RDS file to load.")
 # ====================================
 # PARAMETERS for plotting
-parser <- add_option(parser, c("--genes"), type='character', default='MYC, CD8A', help = "column name of percent mitochondrial genes [often times it's called percent.mt].")
+parser <- add_option(parser, c("--genes"), type='character', default='MYC, CD8A', help = "List ")
 parser <- add_option(parser, c("--group_plots"), type='character', default='Horizontally', help = "How to group plots that are associated with the same marker.")
 # ====================================
 #parameter for saving plot
