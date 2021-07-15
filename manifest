@@ -1,9 +1,9 @@
-# Seurat.VisualizeMarkerExpression  urn:lsid:genepattern.org:module.analysis:00421:1
-#Thu Jul 15 04:59:11 UTC 2021
+# Seurat.VisualizeMarkerExpression  urn:lsid:genepattern.org:module.analysis:00421:0.3
+#Thu Jul 15 05:31:13 UTC 2021
 JVMLevel=
-LSID=urn\:lsid\:genepattern.org\:module.analysis\:00421\:1
+LSID=urn\:lsid\:genepattern.org\:module.analysis\:00421\:0.3
 author=Edwin F. Juarez;UCSD - Mesirov Lab
-categories=visualizer
+categories=single-cell;singlecell
 commandLine=Rscript --no-save --quiet --slave --no-restore  <libdir>seurat_visualize.R --input_file <input_file> --genes <genes> --group_plots <group_plots> --output_file_name <output_file_name>
 cpuType=any
 description=Visualize Marker Expression as violin plots and on a UMap. To be used after Seurat.Clustering
@@ -66,9 +66,10 @@ p4_prefix_when_specified=
 p4_type=java.lang.String
 p4_value=
 privacy=public
-quality=development
+publicationDate=07/15/2021 01\:27 
+quality=preproduction
 src.repo=https\://github.com/genepattern/Seurat.VisualizeMarkerExpression
 taskDoc=documentation.md
-taskType=visualizer
+taskType=single-cell
 userid=edjuaro
 version=First version
