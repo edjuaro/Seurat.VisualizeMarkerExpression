@@ -13,7 +13,7 @@ parser = OptionParser()
 parser <- add_option(parser, c("--input_file"), help = "RDS file to load.")
 # ====================================
 # PARAMETERS for plotting
-parser <- add_option(parser, c("--genes"), type='character', default='MYC, CD8A', help = "List ")
+parser <- add_option(parser, c("--genes"), type='character', default='MYC, CD8A', help = "List of genes to visualize. If you write multiple genes they must be separated by a comma and a space (for example: MS4A1, CD8A, CD14). ")
 parser <- add_option(parser, c("--group_plots"), type='character', default='Horizontally', help = "How to group plots that are associated with the same marker.")
 # ====================================
 #parameter for saving plot
@@ -95,11 +95,3 @@ for (gene in unlist(strsplit(args$genes, ', '))){
 }
 
 dev.off() # Close the PDF file
-
-
-# paste0(geneofinterest)
-
-# plot(VlnPlot(pbmc, features = gene))
-# plot(FeaturePlot(pbmc, features = gene))
-
-# %%r_build_ui -w 1200 { "name": "Annotate Seurat Clusters", "parameters": {"gene":{"type":"string","default":"MS4A1, CD8A","description":"The expression of these in different clusters will be plotted. If you write multiple genes they must be separated by a comma and a space (for example: MS4A1, CD8A, CD14)."},"output_var": { "hide": "True" } } }
