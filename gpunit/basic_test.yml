@@ -1,0 +1,10 @@
+name: "Seurat.VisualizeMarkerExpression - Basic test"
+module: Seurat.VisualizeMarkerExpression
+params:
+    input_file: "https://datasets.genepattern.org/data/module_support_files/SeuratClustering/postmarker.rds"
+    genes: 'MS4A1, GARbage, CD8A, cd8a, CD2, MYC'
+    group_plots: "Horizontally"
+    output_file_name: "GPUnit_test"
+assertions:
+    jobStatus: success
+    numFiles: 3
