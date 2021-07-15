@@ -6,10 +6,8 @@
 <target name="create-zip" depends="init">
     <antcall target="prezip"/>
     <zip destfile="${dest.dir}/${ant.project.name}.zip" whenempty="fail" defaultexcludes="true">
-        <fileset dir="." includes="manifest, Dockerfile, LICENSE"/>
-        <!-- <fileset dir="docs/v2" includes="doc.html"/> -->
-        <!-- if you are iterating in the module integrator you will need to include the source files in the module zip -->
-        <fileset dir="src" includes="*.R"/>
+        <fileset dir="." includes="manifest, Dockerfile, LICENSE, documentation.md"/>
+        <zipfileset dir="src" includes="*.R"/>
     </zip>
     <antcall target="postzip"/>
 </target>
