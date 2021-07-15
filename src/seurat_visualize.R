@@ -13,7 +13,7 @@ parser = OptionParser()
 parser <- add_option(parser, c("--input_file"), help = "RDS file to load.")
 # ====================================
 # PARAMETERS for plotting
-parser <- add_option(parser, c("--genes"), type='character', default='MYC, CD8A', help = "List of genes to visualize. If you write multiple genes they must be separated by a comma and a space (for example: MS4A1, CD8A, CD14). ")
+parser <- add_option(parser, c("--genes"), type='character', default='MYC, CD8A', help = "List of genes to visualize. If you write multiple genes they must be separated by a comma and a space (for example: MS4A1, CD8A, CD14).")
 parser <- add_option(parser, c("--group_plots"), type='character', default='Horizontally', help = "How to group plots that are associated with the same marker.")
 # ====================================
 #parameter for saving plot
@@ -87,7 +87,7 @@ for (gene in unlist(strsplit(args$genes, ', '))){
             
             par(mar = c(0,0,0,0))
             plot(c(0, 1), c(0, 1), ann = F, bty = 'n', type = 'n', xaxt = 'n', yaxt = 'n')
-            text(x = 0.5, y = 0.5, paste("The gene named ",gene," was not present in your dataset."), 
+            text(x = 0.5, y = 0.5, paste("The gene named\n",gene,"\nwas not present in your dataset."), 
                  cex = 1.6, col = "black")
             par(mar = c(5, 4, 4, 2) + 0.1)
         }
